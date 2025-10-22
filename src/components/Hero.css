@@ -440,52 +440,78 @@
 
 @media (max-width: 480px) {
   .hero-header-wrapper {
-    padding: 0.75rem;
+    padding: 1rem 4%;
   }
 
   .hero-logo {
-    height: 40px;
+    height: 50px;
+  }
+
+  .hero {
+    min-height: 600px;
+  }
+
+  .hero-slide-content {
+    padding: 0 4%;
+  }
+
+  .hero-slide-title {
+    font-size: clamp(1.75rem, 8vw, 2.25rem);
+    margin-bottom: 1rem;
+  }
+
+  .hero-slide-subtitle {
+    font-size: 0.9375rem;
+    margin-bottom: 1.5rem;
+    line-height: 1.5;
+  }
+
+  .btn-hero {
+    padding: 0.875rem 1.75rem;
+    font-size: 0.875rem;
+    width: 100%;
+    justify-content: center;
   }
 
   .low-hero {
-    padding: 0.5rem 3%;
+    padding: 0.75rem 4%;
   }
 
   .low-hero-container {
-    gap: 0.5rem;
+    grid-template-columns: 1fr;
+    gap: 0.625rem;
   }
 
   .low-hero-card {
-    padding: 0.25rem 0.375rem;
+    padding: 0.5rem 0.75rem;
   }
 
   .low-hero-icon {
-    width: 24px;
-    height: 24px;
-    min-width: 24px;
-    border-radius: 6px;
+    width: 32px;
+    height: 32px;
+    min-width: 32px;
   }
 
   .low-hero-icon svg {
-    width: 12px;
-    height: 12px;
+    width: 16px;
+    height: 16px;
+  }
+
+  .low-hero-title {
+    font-size: 0.8125rem;
+  }
+
+  .low-hero-description {
+    font-size: 0.6875rem;
   }
 
   .hero-indicators {
     gap: 0.5rem;
-    bottom: 3.5rem;
+    bottom: 6.5rem;
   }
 
   .hero-indicator {
-    width: 35px;
-    height: 2.5px;
-  }
-
-  .hero-slide-title {
-    margin-bottom: 1.25rem;
-  }
-
-  .hero-slide-subtitle {
-    margin-bottom: 1.75rem;
+    width: 40px;
+    height: 3px;
   }
 }

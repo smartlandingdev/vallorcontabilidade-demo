@@ -236,23 +236,39 @@
 
 @media (max-width: 480px) {
   .useful-links {
-    padding: 3rem 5%;
+    padding: 3rem 4%;
+  }
+
+  .useful-links-header {
+    margin-bottom: 2rem;
+  }
+
+  .useful-links-title {
+    font-size: clamp(1.5rem, 6vw, 1.875rem);
+  }
+
+  .useful-links-intro {
+    font-size: 0.9375rem;
+  }
+
+  .links-grid {
+    gap: 0.875rem;
   }
 
   .link-card {
-    padding: 1rem 1.25rem;
+    padding: 1.125rem 1.25rem;
     gap: 1rem;
   }
 
   .link-icon {
-    width: 40px;
-    height: 40px;
-    min-width: 40px;
+    width: 42px;
+    height: 42px;
+    min-width: 42px;
   }
 
   .link-icon svg {
-    width: 20px;
-    height: 20px;
+    width: 21px;
+    height: 21px;
   }
 
   .link-arrow {
@@ -263,9 +279,19 @@
 
   .link-title {
     font-size: 0.9375rem;
+    margin-bottom: 0.25rem;
   }
 
   .link-description {
-    font-size: 0.75rem;
+    font-size: 0.8125rem;
+    line-height: 1.5;
+  }
+
+  .link-card:hover {
+    transform: translateX(2px);
+  }
+
+  .link-card-featured {
+    margin-top: 0.75rem;
   }
 }

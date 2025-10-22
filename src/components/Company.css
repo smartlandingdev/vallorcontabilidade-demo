@@ -565,19 +565,73 @@
 
 @media (max-width: 480px) {
   .company {
-    padding: 3rem 5%;
+    padding: 3rem 4%;
+  }
+
+  .company-title {
+    font-size: clamp(1.5rem, 6vw, 1.875rem);
+    margin-bottom: 1.25rem;
+  }
+
+  .company-text p {
+    font-size: 0.9375rem;
+    line-height: 1.7;
   }
 
   .company-values {
-    gap: 1.25rem;
+    gap: 1rem;
+    margin-bottom: 2rem;
   }
 
   .company-value-card {
-    padding: 1.5rem;
+    padding: 1.25rem;
+  }
+
+  .company-value-card strong {
+    font-size: 0.9375rem;
   }
 
   .company-visual {
-    height: 350px;
+    height: 300px;
+    margin: 0 auto;
+  }
+
+  .central-hub {
+    width: 80px;
+    height: 80px;
+  }
+
+  .hub-core {
+    width: 50px;
+    height: 50px;
+  }
+
+  .circle-1 {
+    width: 250px;
+    height: 250px;
+  }
+
+  .circle-2 {
+    width: 180px;
+    height: 180px;
+  }
+
+  .circle-3 {
+    width: 120px;
+    height: 120px;
+  }
+
+  .floating-element {
+    padding: 0.5rem 0.75rem;
+  }
+
+  .floating-element svg {
+    width: 16px;
+    height: 16px;
+  }
+
+  .floating-element span {
+    font-size: 0.6875rem;
   }
 
   .element-5,
@@ -587,35 +641,15 @@
     display: none;
   }
 
+  .particle {
+    width: 4px;
+    height: 4px;
+  }
+
   .particle-3,
   .particle-4,
   .particle-5,
   .particle-6 {
     display: none;
-  }
-
-  .center-core {
-    width: 70px;
-    height: 70px;
-  }
-
-  .center-core svg {
-    width: 24px;
-    height: 24px;
-  }
-
-  .ring-1 {
-    width: 100px;
-    height: 100px;
-  }
-
-  .ring-2 {
-    width: 130px;
-    height: 130px;
-  }
-
-  .ring-3 {
-    width: 160px;
-    height: 160px;
   }
 }

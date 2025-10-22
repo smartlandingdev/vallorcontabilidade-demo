@@ -218,42 +218,70 @@
 
 @media (max-width: 480px) {
   .contact {
-    padding: 3rem 5%;
+    padding: 3rem 4%;
+  }
+
+  .contact-container {
+    gap: 1.5rem;
+  }
+
+  .contact-title {
+    font-size: clamp(1.5rem, 6vw, 2rem);
+    margin-bottom: 1.25rem;
   }
 
   .contact-content {
-    padding: 1.75rem;
+    padding: 1.75rem 1.5rem;
+  }
+
+  .contact-info {
+    gap: 1.5rem;
+    margin-bottom: 1.75rem;
+  }
+
+  .contact-item {
+    gap: 0.875rem;
+  }
+
+  .contact-icon {
+    width: 42px;
+    height: 42px;
+    min-width: 42px;
+  }
+
+  .contact-icon svg {
+    width: 21px;
+    height: 21px;
+  }
+
+  .contact-details p {
+    font-size: 0.8125rem;
+  }
+
+  .contact-details strong {
+    font-size: 0.9375rem;
+  }
+
+  .contact-details a {
+    font-size: 0.875rem;
   }
 
   .contact-map {
     padding: 1.5rem;
   }
 
-  .contact-item {
-    gap: 1rem;
-  }
-
-  .contact-icon {
-    width: 40px;
-    height: 40px;
-    min-width: 40px;
-  }
-
-  .contact-icon svg {
-    width: 20px;
-    height: 20px;
-  }
-
-  .contact-details p,
-  .contact-details a {
-    font-size: 0.875rem;
-  }
-
   .map-title {
     font-size: 1.25rem;
+    margin-bottom: 1rem;
+  }
+
+  .map-address {
+    font-size: 0.8125rem;
+    margin-bottom: 1.25rem;
   }
 
   .map-container {
-    min-height: 350px;
+    min-height: 320px;
+    border-radius: 10px;
   }
 }
