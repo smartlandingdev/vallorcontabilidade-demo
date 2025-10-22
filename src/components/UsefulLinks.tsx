@@ -6,7 +6,7 @@ interface Link {
   title: string;
   description: string;
   url: string;
-  icon: JSX.Element;
+  icon: React.ReactElement;
 }
 
 const UsefulLinks: React.FC = () => {

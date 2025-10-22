@@ -6,7 +6,7 @@ interface Service {
   title: string;
   description: string;
   details?: string[];
-  icon: JSX.Element;
+  icon: React.ReactElement;
 }
 
 const Services: React.FC = () => {
