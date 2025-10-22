@@ -1,0 +1,259 @@
+.contact {
+  padding: 6rem 5%;
+  background: #fafafa;
+  position: relative;
+  overflow: hidden;
+}
+
+/* Textura de papel sutil */
+.contact::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-image:
+    repeating-linear-gradient(0deg, transparent, transparent 2px, rgba(0, 0, 0, 0.01) 2px, rgba(0, 0, 0, 0.01) 4px),
+    repeating-linear-gradient(90deg, transparent, transparent 2px, rgba(0, 0, 0, 0.01) 2px, rgba(0, 0, 0, 0.01) 4px);
+  opacity: 0.5;
+  pointer-events: none;
+}
+
+.contact-container {
+  max-width: 1400px;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: 1fr 1.2fr;
+  gap: 4rem;
+  align-items: start;
+  position: relative;
+  z-index: 1;
+}
+
+/* Conteúdo à esquerda */
+.contact-content {
+  background: white;
+  border-radius: 20px;
+  padding: 3rem;
+  box-shadow:
+    0 4px 24px rgba(30, 58, 95, 0.08),
+    0 1px 3px rgba(30, 58, 95, 0.04);
+  border: 1px solid rgba(30, 58, 95, 0.06);
+}
+
+.contact-title {
+  font-size: clamp(2rem, 4vw, 2.5rem);
+  font-weight: 700;
+  color: #1e3a5f;
+  margin-bottom: 0.5rem;
+  font-family: var(--font-heading);
+  line-height: 1.2;
+}
+
+.contact-company {
+  font-size: 1.125rem;
+  font-weight: 600;
+  color: #ff6b35;
+  margin-bottom: 2.5rem;
+  font-family: var(--font-heading);
+}
+
+/* Informações de contato */
+.contact-info {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+}
+
+.contact-item {
+  display: flex;
+  gap: 1.25rem;
+  align-items: center;
+}
+
+.contact-icon {
+  width: 48px;
+  height: 48px;
+  min-width: 48px;
+  flex-shrink: 0;
+  background: linear-gradient(135deg, #1e3a5f 0%, #2d5a8f 100%);
+  border-radius: 12px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: white;
+}
+
+.contact-icon svg {
+  width: 24px;
+  height: 24px;
+}
+
+.contact-details {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  gap: 0.25rem;
+}
+
+.contact-details p {
+  margin: 0;
+  line-height: 1.5;
+  color: #475569;
+  font-size: 0.9375rem;
+}
+
+.contact-details strong {
+  color: #1e3a5f;
+  font-weight: 600;
+  font-size: 1rem;
+  display: block;
+}
+
+.contact-details a {
+  color: #ff6b35;
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+
+.contact-details a:hover {
+  color: #1e3a5f;
+  text-decoration: underline;
+}
+
+
+/* Mapa à direita */
+.contact-map {
+  background: white;
+  border-radius: 20px;
+  padding: 2rem;
+  box-shadow:
+    0 4px 24px rgba(30, 58, 95, 0.08),
+    0 1px 3px rgba(30, 58, 95, 0.04);
+  border: 1px solid rgba(30, 58, 95, 0.06);
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+}
+
+.map-title {
+  font-size: 1.5rem;
+  font-weight: 600;
+  color: #1e3a5f;
+  margin-bottom: 1.5rem;
+  font-family: var(--font-heading);
+}
+
+.map-container {
+  flex: 1;
+  border-radius: 16px;
+  overflow: hidden;
+  box-shadow: 0 4px 16px rgba(30, 58, 95, 0.12);
+  min-height: 450px;
+  position: relative;
+}
+
+.map-container iframe {
+  display: block;
+}
+
+/* Responsividade */
+@media (max-width: 1024px) {
+  .contact-container {
+    gap: 3rem;
+  }
+
+  .contact-content {
+    padding: 2.5rem;
+  }
+
+  .contact-map {
+    padding: 1.75rem;
+  }
+}
+
+@media (max-width: 768px) {
+  .contact {
+    padding: 4rem 5%;
+  }
+
+  .contact-container {
+    grid-template-columns: 1fr;
+    gap: 2.5rem;
+  }
+
+  .contact-content {
+    padding: 2rem;
+  }
+
+  .contact-title {
+    font-size: clamp(1.75rem, 5vw, 2rem);
+  }
+
+  .contact-company {
+    font-size: 1rem;
+    margin-bottom: 2rem;
+  }
+
+  .contact-info {
+    gap: 1.75rem;
+  }
+
+  .contact-icon {
+    width: 44px;
+    height: 44px;
+    min-width: 44px;
+  }
+
+  .contact-icon svg {
+    width: 22px;
+    height: 22px;
+  }
+
+  .map-container {
+    min-height: 400px;
+  }
+}
+
+@media (max-width: 480px) {
+  .contact {
+    padding: 3rem 5%;
+  }
+
+  .contact-content {
+    padding: 1.75rem;
+  }
+
+  .contact-map {
+    padding: 1.5rem;
+  }
+
+  .contact-item {
+    gap: 1rem;
+  }
+
+  .contact-icon {
+    width: 40px;
+    height: 40px;
+    min-width: 40px;
+  }
+
+  .contact-icon svg {
+    width: 20px;
+    height: 20px;
+  }
+
+  .contact-details p,
+  .contact-details a {
+    font-size: 0.875rem;
+  }
+
+  .map-title {
+    font-size: 1.25rem;
+  }
+
+  .map-container {
+    min-height: 350px;
+  }
+}

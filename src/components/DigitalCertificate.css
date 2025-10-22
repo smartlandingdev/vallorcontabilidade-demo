@@ -1,0 +1,457 @@
+.digital-certificate {
+  padding: 6rem 5%;
+  background: linear-gradient(135deg, #1e3a5f 0%, #2d5a8f 50%, #1e3a5f 100%);
+  position: relative;
+  overflow: hidden;
+}
+
+.digital-certificate::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background:
+    radial-gradient(circle at 20% 50%, rgba(255, 255, 255, 0.03) 0%, transparent 50%),
+    radial-gradient(circle at 80% 80%, rgba(255, 255, 255, 0.03) 0%, transparent 50%);
+  pointer-events: none;
+}
+
+.certificate-container {
+  max-width: 1400px;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 5rem;
+  align-items: center;
+  position: relative;
+  z-index: 1;
+}
+
+/* Visual à esquerda */
+.certificate-visual {
+  position: relative;
+  height: 500px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* Cartão de Certificado Digital */
+.certificate-card {
+  width: 380px;
+  height: 240px;
+  background: linear-gradient(135deg, #f5f5f5 0%, #e8e8e8 100%);
+  border-radius: 20px;
+  padding: 2rem;
+  position: relative;
+  box-shadow:
+    0 20px 60px rgba(0, 0, 0, 0.3),
+    0 0 0 1px rgba(255, 255, 255, 0.1);
+  animation: card-float 6s ease-in-out infinite;
+  transform-style: preserve-3d;
+  perspective: 1000px;
+  overflow: hidden;
+}
+
+@keyframes card-float {
+  0%, 100% {
+    transform: translateY(0px) rotateY(-8deg) rotateX(3deg);
+  }
+  50% {
+    transform: translateY(-10px) rotateY(8deg) rotateX(-3deg);
+  }
+}
+
+/* Brilho do cartão */
+.card-shine {
+  position: absolute;
+  top: 0;
+  left: -100%;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.3), transparent);
+  animation: shine 8s ease-in-out infinite;
+  border-radius: 20px;
+}
+
+@keyframes shine {
+  0%, 100% {
+    left: -100%;
+  }
+  50% {
+    left: 100%;
+  }
+}
+
+/* Cabeçalho do cartão */
+.card-header {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 1.5rem;
+}
+
+.cert-type {
+  font-size: 0.875rem;
+  font-weight: 700;
+  color: #1e3a5f;
+  background: rgba(30, 58, 95, 0.1);
+  padding: 0.375rem 0.875rem;
+  border-radius: 6px;
+  letter-spacing: 0.5px;
+}
+
+/* Microchip */
+.card-chip {
+  width: 50px;
+  height: 40px;
+  margin-bottom: 1rem;
+}
+
+/* Logo Receita Federal */
+.federal-logo {
+  position: absolute;
+  top: 50%;
+  right: -40px;
+  transform: translateY(-50%);
+  width: 320px;
+  height: 320px;
+  opacity: 0.12;
+}
+
+.federal-logo img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+}
+
+/* Rodapé do cartão */
+.card-footer {
+  position: absolute;
+  bottom: 2rem;
+  left: 2rem;
+  right: 2rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 1rem;
+}
+
+.card-logo {
+  height: 35px;
+  filter: none;
+}
+
+.cert-text {
+  font-size: 0.9375rem;
+  font-weight: 700;
+  color: #1e3a5f;
+  letter-spacing: 0.3px;
+  white-space: nowrap;
+}
+
+/* Pendrive */
+.usb-drive {
+  position: absolute;
+  top: 10%;
+  right: 5%;
+  width: 80px;
+  height: 120px;
+  animation: usb-float 4s ease-in-out infinite;
+  filter: drop-shadow(0 10px 20px rgba(0, 0, 0, 0.2));
+}
+
+@keyframes usb-float {
+  0%, 100% {
+    transform: translateY(0px) rotate(-10deg);
+  }
+  50% {
+    transform: translateY(-20px) rotate(10deg);
+  }
+}
+
+/* Conteúdo à direita */
+.certificate-content {
+  color: white;
+}
+
+.certificate-title {
+  font-size: clamp(2rem, 4vw, 2.75rem);
+  font-weight: 700;
+  margin-bottom: 1.5rem;
+  font-family: var(--font-heading);
+  line-height: 1.2;
+}
+
+.certificate-description {
+  font-size: 1.0625rem;
+  line-height: 1.8;
+  color: rgba(255, 255, 255, 0.9);
+  margin-bottom: 2.5rem;
+}
+
+/* Features */
+.certificate-features {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+  margin-bottom: 2.5rem;
+}
+
+.feature-item {
+  display: flex;
+  gap: 1.25rem;
+  align-items: flex-start;
+}
+
+.feature-icon {
+  width: 48px;
+  height: 48px;
+  min-width: 48px;
+  background: rgba(255, 255, 255, 0.15);
+  border-radius: 12px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: white;
+}
+
+.feature-icon svg {
+  width: 24px;
+  height: 24px;
+}
+
+.feature-text h3 {
+  font-size: 1.125rem;
+  font-weight: 600;
+  margin-bottom: 0.375rem;
+  font-family: var(--font-heading);
+}
+
+.feature-text p {
+  font-size: 0.9375rem;
+  color: rgba(255, 255, 255, 0.8);
+  margin: 0;
+}
+
+/* Tipos */
+.certificate-types {
+  background: rgba(255, 255, 255, 0.1);
+  border-radius: 12px;
+  padding: 1.5rem;
+  margin-bottom: 2.5rem;
+  border: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+.types-title {
+  font-size: 1.125rem;
+  font-weight: 600;
+  margin-bottom: 1rem;
+  font-family: var(--font-heading);
+}
+
+.types-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+}
+
+.types-list li {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  font-size: 0.9375rem;
+  color: rgba(255, 255, 255, 0.9);
+}
+
+.types-list li svg {
+  width: 20px;
+  height: 20px;
+  color: #ff6b35;
+  flex-shrink: 0;
+}
+
+.types-list li strong {
+  color: white;
+}
+
+/* CTA */
+.certificate-cta {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.75rem;
+  padding: 1rem 2rem;
+  background: #ff6b35;
+  color: white;
+  font-size: 1rem;
+  font-weight: 600;
+  border-radius: 50px;
+  text-decoration: none;
+  transition: all 0.3s ease;
+  box-shadow: 0 8px 24px rgba(255, 107, 53, 0.3);
+}
+
+.certificate-cta:hover {
+  background: #ff8c5a;
+  transform: translateY(-2px);
+  box-shadow: 0 12px 32px rgba(255, 107, 53, 0.4);
+}
+
+.certificate-cta svg {
+  width: 20px;
+  height: 20px;
+}
+
+/* Responsividade */
+@media (max-width: 1024px) {
+  .certificate-container {
+    gap: 4rem;
+  }
+
+  .certificate-visual {
+    height: 450px;
+  }
+
+  .certificate-card {
+    width: 340px;
+    height: 216px;
+    padding: 1.75rem;
+  }
+
+  .federal-logo {
+    width: 280px;
+    height: 280px;
+    right: -30px;
+  }
+
+  .usb-drive {
+    width: 70px;
+    height: 105px;
+  }
+}
+
+@media (max-width: 768px) {
+  .digital-certificate {
+    padding: 4rem 5%;
+  }
+
+  .certificate-container {
+    grid-template-columns: 1fr;
+    gap: 3rem;
+  }
+
+  .certificate-visual {
+    height: 350px;
+  }
+
+  .certificate-card {
+    width: 300px;
+    height: 190px;
+    padding: 1.5rem;
+  }
+
+  .card-chip {
+    width: 45px;
+    height: 36px;
+  }
+
+  .federal-logo {
+    width: 250px;
+    height: 250px;
+    right: -25px;
+  }
+
+  .card-logo {
+    height: 28px;
+  }
+
+  .usb-drive {
+    width: 60px;
+    height: 90px;
+    right: -5%;
+  }
+
+  .certificate-title {
+    font-size: clamp(1.75rem, 5vw, 2.25rem);
+  }
+
+  .certificate-description {
+    font-size: 1rem;
+  }
+
+  .feature-icon {
+    width: 44px;
+    height: 44px;
+    min-width: 44px;
+  }
+
+  .feature-icon svg {
+    width: 22px;
+    height: 22px;
+  }
+}
+
+@media (max-width: 480px) {
+  .digital-certificate {
+    padding: 3rem 5%;
+  }
+
+  .certificate-visual {
+    height: 300px;
+  }
+
+  .certificate-card {
+    width: 280px;
+    height: 176px;
+    padding: 1.25rem;
+  }
+
+  .card-footer {
+    bottom: 1.25rem;
+    left: 1.25rem;
+    right: 1.25rem;
+  }
+
+  .card-logo {
+    height: 24px;
+  }
+
+  .federal-logo {
+    width: 230px;
+    height: 230px;
+    right: -20px;
+  }
+
+  .usb-drive {
+    width: 50px;
+    height: 75px;
+  }
+
+  .certificate-features {
+    gap: 1.25rem;
+  }
+
+  .feature-item {
+    gap: 1rem;
+  }
+
+  .feature-icon {
+    width: 40px;
+    height: 40px;
+    min-width: 40px;
+  }
+
+  .feature-icon svg {
+    width: 20px;
+    height: 20px;
+  }
+
+  .certificate-cta {
+    width: 100%;
+    justify-content: center;
+  }
+}

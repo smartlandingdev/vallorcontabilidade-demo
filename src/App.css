@@ -1,0 +1,15 @@
+.app {
+  width: 100%;
+  min-height: 100vh;
+  overflow-x: hidden;
+}
+
+/* Smooth scroll para navegação */
+html {
+  scroll-behavior: smooth;
+}
+
+/* Garantir que todas as seções tenham scroll suave */
+section {
+  scroll-margin-top: 80px;
+}
